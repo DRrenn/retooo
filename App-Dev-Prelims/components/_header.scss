@@ -1,0 +1,450 @@
+.header {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    border-bottom: 1px solid $clr-greyfont;
+    // background-color: $clr-light; IF HOME PAGE AND ACCORDION //
+    
+    .container {
+        #rainbow {
+            display: none;
+        }
+    }
+
+
+    &.blue {
+        background-color: $clr-light;
+        animation: slide .2s forwards;
+        position: fixed;
+      
+        .container {
+            #rainbow {
+                display: block;
+            }
+        }
+        .link {
+            li {
+                color: $clr-dark !important;
+
+                a {
+                    color: $clr-dark !important;
+                }
+            }
+
+            
+        }
+
+        .bilog {
+            i {
+                color: $clr-dark !important;
+            }
+        }
+
+        .burgir {
+            span {
+                background-color: $clr-dark;
+            }
+        }
+
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        
+        }
+
+        
+
+
+    }
+
+    
+    // position: fixed; to be added to scroll js //
+    a:hover {
+        color: $clr-primary;
+        transition: .2s ease;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: transparent;
+    }
+
+    
+    
+    .kamote {
+        background-color: $clr-dark;
+        height: 100vh;
+        width: 100%;
+        opacity: 0.7;
+        position: absolute;
+        top: 0;
+        left: -100rem;
+
+        &.open {
+            left: 0;
+            transition: 0.7s ease;
+        }
+
+        left: -100rem;
+        transition: 0.7s ease;
+    }
+    
+    img {
+        width: 25%;
+    }
+    
+    &__nav {
+        display: flex;
+        
+
+        
+        .link {
+            z-index: 3;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            right: -100rem;
+            width: 66%;
+            height: 100vh;
+            transition: 0.5s ease;
+            background-color: $clr-light;
+
+            &.open {
+            right: 0;
+            
+            }
+
+            right: -100rem;
+            transition: 0.5s ease;
+
+            &_top {
+                img {
+                    width: 40%;
+                }
+                display: flex;
+                justify-content: space-between;
+                margin: 1.5rem;
+            }
+
+
+            
+            
+            ul {
+                display: flex;
+                flex-direction: column;
+
+                .sub-nav {
+                    display: none;
+                }
+                li {
+                    margin: 1rem 2rem;
+                    font-size: 2rem;
+                    display: flex;
+                    // flex-direction: column;
+                    position: relative;
+
+                    
+                    
+                }
+
+                li a {
+                    flex-shrink: 0;
+                }
+
+                :nth-child(7) {
+                    animation: flash .3s infinite;
+                    @keyframes flash {
+                        0%, 100% {
+                            opacity: 1; 
+                        }
+                        50% {
+                            opacity: 0; 
+                        }
+                    }
+                }
+
+                .fa-solid.fa-chevron-down {
+                    display: none;
+                    
+                }
+
+                .fa-solid.fa-circle-plus {
+                    position: absolute;
+                    right: 0;
+                    
+                    &:hover {
+                        color: $clr-primary;
+                        transition: .2s ease;
+                    }
+
+                    &.open {
+                        .sub-nav {
+                            display: none;
+                            transition: .5s ease;
+                        }
+                    }
+
+
+                }
+
+                
+
+                .fa-solid.fa-circle-minus {
+                    display: none;
+                }
+            }
+
+            &_contact {
+                li {
+                    color: $clr-primary;
+                    font-size: 1.5rem;
+                    margin: 2rem;
+                    
+                }
+            }
+
+            &_logos {
+                margin: 2rem;
+                
+                i {
+                    margin: 0 .7rem;
+
+                    &:hover {
+                        color: $clr-primary;
+                        transition: .2s ease;
+                    }
+
+                }
+            }
+        }
+
+        .bilog {
+            scale: 2;
+            margin: 0 3rem;
+            
+            a {
+                color: $clr-light;
+
+                &:hover {
+                    :nth-of-type(1) {
+                        color: $clr-primary;
+                        transition: 0.5s ease;
+                    }
+    
+                    :nth-of-type(2) {
+                        color: $clr-primary;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    .burgir {
+        span {
+            width: 2.5rem;
+            height: 0.3rem;
+            background-color: $clr-light;
+            display: block;
+            border-radius: 5rem;
+            transition: 0.5s ease-in-out;
+            
+            
+            &:nth-child(2) {
+                margin: .5rem 0;
+            }
+        }
+        &.open {
+            span {
+                background-color: $clr-dark;
+                &:first-child {
+                    transform: translate(0, 10px) rotate(45deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0 !important;
+                }
+                &:last-child {
+                    transform: translate(0, -6px) rotate(-45deg);
+                }
+                
+                animation: blink 0.7s forwards;
+
+            @keyframes blink {
+                0% { 
+                    opacity: 1;
+                    
+                  }
+                50% { 
+                    opacity: 0;
+                  }
+
+                100% {
+                    opacity: 1;
+                    
+                }
+                
+                
+            }
+
+            
+
+            }
+            
+
+            z-index: 4;
+
+            
+            
+        }
+        
+    }
+
+    @include mediaQuery($break-md) {
+        .header {
+            position: fixed;
+            
+            
+        }
+        .kamote {
+            display: none;
+        }
+        .container {            
+            display: flex;
+            padding: 1rem;
+            
+            
+            img {
+                width: 9%;
+            }
+            #rainbow {
+                display: none;
+            }
+
+            .header__wrapper {
+                display: flex;
+               
+                .header__nav {
+                    align-items: center;
+                    justify-content: center;
+
+                    .link {
+                        display: unset;
+                        height: auto;
+                        width: auto;
+                        position: unset;
+                        background: transparent;
+
+                        &_top {
+                            display: none;
+                        }
+
+                        &_logos {
+                            display: none;
+                        }
+
+                        &_contact {
+                            display: none;
+                        }
+
+                        ul {
+                            display: unset;
+                            display: flex;
+                            flex-direction: row;
+                            color: $clr-greyfont;
+                            transition: 0.5s ease;
+                        
+                            .sub-nav {
+                                position: absolute;
+                                display: none; 
+                                
+                                top: 100%;
+                                width: 170px;
+                                height: 150px;
+                                padding: 25px .5rem;
+                        
+                                h3 {
+                                    font-size: 2;
+                                    color: $clr-dark;
+                                    margin: 0 0 2rem 0;
+                                }
+
+                                &:hover {
+                                    display: block;
+                                }
+                        
+                                a {
+                                   
+                                    background-color: transparent;
+                                    font-size: 1.6rem;
+                                    color: $clr-greyfont;
+                                    font-weight: 900;
+                        
+                                    &:hover {
+                                        color: $clr-primary !important;
+                                    }   
+                                }
+
+                                .sub-nav-container {
+                                    background-color: $clr-light;
+                                    margin: 0 -5px;
+                                    padding: 1rem;
+                                    height: 150px;
+                                }
+                            }
+                        
+                            li {
+                                display: unset;
+                                display: flex;
+                                font-size: 1.4rem;
+                                color: $clr-light;
+                        
+                                &:hover .sub-nav {
+                                    display: block;
+                                    transition: 100s ease-out;
+                                }
+                        
+                                a {
+                                    color: $clr-light;
+                                    z-index: 3;
+                        
+                                    &:hover {
+                                        color: $clr-greyfont;
+                                        transition: 0.5s ease;
+                                    }
+                                }
+                        
+                                .fa-solid.fa-chevron-down {
+                                    display: unset;
+                                    margin-left: 0.5rem;
+                                }
+                        
+                                .fa-solid.fa-circle-plus {
+                                    display: none;
+                                }
+
+                                
+                            }
+                        
+                        }
+                    }
+
+                    .burgir {
+                        display: none;
+                    }
+
+                    
+                }
+            }
+        }
+        
+    }
+
+}
+

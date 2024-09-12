@@ -1,0 +1,875 @@
+.hero1 {
+  width: 100%;
+  height: 35rem;
+  background-image: url(/img/about_us_title_bg.jpg);
+  background-position: -69rem, 0rem;
+  
+  @include mediaQuery($break-md) {
+      background-position: -20rem, 0rem;
+  }
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content:center ;
+
+  &_title {
+      text-align: center;
+      color: $clr-light;
+      font-size: 2rem;
+      line-height: 4rem;
+      margin-top: 10rem;
+      h1 {
+          font-weight: 500;
+          letter-spacing: 1px;
+      }
+  } 
+  &_details {
+      display: flex;
+     align-items: center;
+     gap: 1rem;
+     span {
+      font-size: 1.5rem;
+     
+     }
+     
+     span:nth-of-type(1),i {
+      cursor: pointer;
+     }
+    
+
+      #loc {
+          margin-right: -1rem;
+          font-size: 1.7rem;
+      }
+  }
+
+}
+
+.hero2 {
+  text-align: center;
+  padding: 8rem 0rem;
+  &_title {
+      font-size: 3.3rem;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 2rem;
+      font-weight: 450;
+      letter-spacing: 1px;
+      
+  }
+  &_title::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%; /* Start the border from the middle */
+      width: 33%; /* Set the length of the border */
+      height: 1px; /* Adjust the thickness of the border */
+      background-color: $clr-primary; /* Color of the border */
+      transform: translateX(-50%); /* Center the border horizontally */
+  }
+
+  &_info {
+      width: 100%;
+      text-align: center;
+      line-height: 3rem;
+      letter-spacing: 1px;
+      color: $clr-lightgrey;
+  }
+
+  @include mediaQuery($break-md) {
+
+      &_title {
+         
+         
+          margin-bottom: 3rem;
+          font-weight: 450;
+          letter-spacing: 1px;
+          
+      }
+      &_title::after {
+          bottom: -13px;
+      }
+     
+  }
+}
+
+.hero3 {
+  background-color: #f8f9fb;
+
+  &_cont {
+      padding: 4rem 1.3rem;
+      .hero3_img {
+          img {
+              width: 100%;
+          }
+          margin-bottom: 2rem
+      }
+  }
+  &_info {
+      h1 {
+          font-size: 3.4rem;
+          font-weight: 440;
+          letter-spacing: 2px;
+          position: relative;
+          display: inline-block;
+          margin-bottom: 20px;
+      }
+      h1::after {
+          content: "";
+          position: absolute;
+          bottom: -9px;
+          left: 12%; 
+          width: 24%; /* Set the length of the border */
+          height: 1px; /* Adjust the thickness of the border */
+          background-color: $clr-primary; /* Color of the border */
+          transform: translateX(-50%); /* Center the border horizontally */
+      }
+      p {
+          font-size: 1.4rem;
+          color: $clr-lightgrey;
+          letter-spacing: 1px;
+          line-height: 2.8rem;
+      }
+
+     
+    
+  }
+  .hero3_cardcont {
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          .hero3_card {
+              display: block;
+              padding: 3rem 0rem;
+            
+              img {
+                  width: 4rem;
+                  margin-bottom: 1rem;
+              }
+              h3 {
+                  font-size: 1.6rem;
+                  margin-bottom: 1rem;
+                  font-weight: 450;
+                  letter-spacing: 1px;
+              }
+              p {
+               color: $clr-greyfont;
+               
+              }
+          }
+      
+  }
+
+  @include mediaQuery($break-md) {
+      &_cont {
+          
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto;
+          padding: 10rem 0;
+          .hero3_img {
+              width: 40%;
+              img {
+                  width: 100%;
+              }
+              margin-bottom: 2rem
+          }
+
+          .hero3_info {
+             
+              
+              width: 40%;
+              .hero3_cardcont {
+                 
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+                  
+                  .hero3_card {
+                      display: block;
+                      padding: 3rem 0rem;
+                    
+                  }
+              
+          }
+          }
+      
+
+          
+      } 
+
+  }
+}
+
+.hero4 {
+
+  .container {
+      .exp_wrapper {
+          margin-top: -3rem;
+      }
+  }
+ padding: 5rem 0;
+  .title {
+    h1 {
+      font-size: 2.3rem;
+      font-weight:480;
+      letter-spacing: 1px;
+      position: relative;
+      margin-bottom: 5rem;
+      
+    }
+    h1::after {
+      content: '';
+      position: absolute;
+      left: 0; /* Center the underline horizontally (adjust as needed) */
+      bottom: -0.7rem; /* Adjust the vertical position of the underline */
+      width: 19%;
+      height: .9px; /* Adjust the thickness of the underline */
+      background-color: $clr-primary; /* Ensures the underline color matches the text color */
+   }
+  
+  }
+ .accordion_cont {
+  margin: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  
+  .accord {
+      transition: .2s ease-in-out;
+    
+      &_title {
+          display: flex;
+          align-items: center;
+          background-color: rgb(239, 236, 236);
+         
+          cursor: pointer;
+          h1 {
+              font-size: 14px;
+              padding: 0rem 1.4rem;
+          }
+          .anglebg {
+              background-color: $clr-grey;
+              width: 49px;
+              height: 50px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              i {
+                  color: $clr-light;
+                  font-size: 1.8rem;
+
+              }
+             
+          }
+
+      }
+
+      &_info {
+          height: 0;
+         transition: .3s ease-out;
+         p {
+          color: $clr-lightgrey;
+          padding: 0 2rem;
+          text-align: justify;
+          height: 0;
+          overflow: hidden;
+          transition: .2s ease-out;
+        
+       
+         }
+      }
+     
+  }
+  .accord:hover {
+      .anglebg {
+      background-color: $clr-primary;
+      
+      }
+  }
+  .accord.active {
+      transition: .1s ease-in-out;
+      .anglebg {
+          background-color: $clr-primary;
+      }
+      i {
+          transform: rotate(90deg);
+          transition: .2s ease-in-out;
+      }
+      .accord_info {
+         
+        
+          height: 12rem;
+          transition: .3s ease-out;
+        
+         p {
+          padding: 2rem;
+          height: 12rem;
+          transition: .3s ease-out;
+          
+         }
+      }
+    
+  }
+ }
+
+ .lvlbar_cont {
+  width: 100%;
+  margin: 4rem 0;
+  background-color: rgb(239, 236, 236);
+  display: flex;
+  flex-direction: column;
+  
+  .lvlbar {
+    
+      background-color: $clr-primary;
+      text-align: center;
+      border-radius: 4px ;
+     
+      
+
+      h1 {
+          font-size: 1.2rem;
+          padding: 8px 0 ;
+          font-weight: 500;
+          color: $clr-light;
+      }
+
+
+  }
+  #htm {
+      width: 93%;
+      background: linear-gradient(to right,  rgb(84, 162, 240), $clr-primary );
+     
+      box-sizing: border-box; 
+  }
+  #ccs {
+      width: 99%;
+     
+  }
+  #joom {
+      width: 91%;
+      background: linear-gradient(to right,  rgb(84, 162, 240), $clr-primary );
+  }
+  #jav {
+      width: 88%;
+  }
+  #des {
+      width: 92%;
+      background: linear-gradient(to right,  rgb(84, 162, 240), $clr-primary );
+  }
+ }
+
+ @include mediaQuery($break-md) {
+  .container{
+      display: flex;
+      gap: 2rem;
+      .accord_wrapper {
+          width: 50%;
+        
+      }
+      .exp_wrapper {
+          margin-top: 0;
+          width: 50%;
+         .title{
+          h1 {
+              margin-bottom: 6rem;
+          }
+         }
+      }
+
+  }
+
+}
+@include mediaQuery ($break-md){
+.title {
+  h1 {
+
+  }
+  h1::after {
+    content: '';
+      position: absolute;
+      left: 0; /* Center the underline horizontally (adjust as needed) */
+      bottom: -0.7rem; /* Adjust the vertical position of the underline */
+      width: 10%;
+      height: .9px; /* Adjust the thickness of the underline */
+      background-color: $clr-primary; /* Ensures the underline color matches the text color */
+  }
+ 
+}
+
+}  
+
+}
+
+
+.hero5 {
+
+  .container_bg {
+    width: 100%;
+    height: fit-content;
+    background-position: center;
+    background-size: cover;
+    background-image: url(/img/parallax_012.jpg);
+    background-attachment: fixed;
+
+   
+    .container {
+      padding: 8rem 0;
+
+      .title {
+        position: relative;
+        text-align: center;
+        display: block; /* Ensure the title only takes as much space as its content */
+        padding-bottom: 1rem; /* Add some space below the text for the underline */
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        margin-top: -1rem;
+
+        h1 {
+          color: $clr-light;
+          font-size: 3.3rem;
+          font-weight: 500;
+          line-height: 4rem;
+        }
+      }
+
+      .title::after {
+        content: '';
+        position: absolute;
+        left: 50%; /* Start from the middle */
+        bottom: 0; /* Align to the bottom of the title */
+        transform: translateX(-50%); /* Center the underline */
+        width: 18%; /* Set the width of the underline */
+        border-bottom: 2px solid $clr-primary; /* Adjust the thickness and color as needed */
+      
+      }
+
+  
+   
+      .card_cont {
+        padding: 3rem 1rem;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: calc((100% / 1) - 0px); // Single card visible on mobile
+        gap: 2rem;
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: none; // Hide scrollbar
+
+        @include mediaQuery($break-md) {
+          grid-auto-columns: calc((100% / 3) - 7px); // Three cards visible on desktop
+         
+        }
+
+        .card {
+          background-color: $clr-light;
+          height: fit-content;
+          padding: 4.6rem 3rem;
+          border-radius: 4px;
+          scroll-snap-align: center; // Center alignment for cards
+
+          &_pfp {
+            img {
+              width: 14.5rem;
+              border-radius: 8rem;
+              display: block;
+              margin: 0 auto;
+              transition: .3s ease-in-out;
+              filter: brightness(70%);
+            }
+            overflow: hidden;
+            height: 14.5rem;
+          }
+          &:hover {
+            .card_pfp {
+              img {
+                transform: scale(0.9);
+                filter: brightness(100%);
+                transition: .3s ease-in-out;
+              }
+            }
+          }
+          .details {
+            text-align: center;
+            color: $clr-grey;
+            padding: 0 1rem;
+
+            p {
+              margin: 2rem 0rem;
+              font-size: 15px;
+              line-height: 2.5rem;
+            }
+            h1 {
+              font-size: 1.5rem;
+              font-weight: 400;
+              color: $clr-primary;
+            }
+
+            ul {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 8px;
+              li {
+                span {
+                  width: 1px;
+                  height: 15px;
+                  display: block;
+                  background-color: black;
+                }
+                &:last-child {
+                  color: black;
+                  cursor: pointer;
+                  &:hover {
+                    color: $clr-primary;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .card_cont::-webkit-scrollbar {
+        display: none; // Hide scrollbar in WebKit browsers
+      }
+      .card_cont.dragging {
+        scroll-behavior: auto;
+        .card {
+          cursor: grab;
+          user-select: none;
+        }
+      }
+      .cardbtn_cont {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        .btn {
+          background-color: $clr-primary;
+          width: fit-content;
+          height: fit-content;
+          cursor: pointer;
+
+          h1 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            padding: 9px 14px;
+            color: $clr-light;
+          }
+        }
+      }
+    }
+    @include mediaQuery ($break-md) {
+      .container {
+      
+        .title::after {
+          content: '';
+          position: absolute;
+          left: 50%; /* Start from the middle */
+          bottom: 0; /* Align to the bottom of the title */
+          transform: translateX(-50%); /* Center the underline */
+          width: 6.4%; /* Set the width of the underline */
+          border-bottom: 2px solid $clr-primary; 
+        }
+      }
+    }
+  }
+}
+
+.hero6 {
+padding: 6.8rem 0 5rem 0;
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x:hidden ;
+}
+.container {
+#hero6_title {
+  font-size: 31.59px;
+  text-align: center;
+  position: relative; /* Ensure the h1 is the reference point for positioning the underline */
+ margin-bottom: 6rem;
+  font-weight: 500;
+
+  /* Create an underline using the ::after pseudo-element */
+  &::after {
+    content: "";
+    display: block;
+    width: 19%; /* Width of the underline */
+    height: 1.9px; /* Thickness of the underline */
+    background-color: $clr-primary; /* Color of the underline */
+    position: absolute;
+    left: 50%; /* Start positioning from the center */
+    bottom: -8px; /* Adjust based on your needs */
+    transform: translateX(-50%); /* Center the underline */
+  }
+}
+
+
+.card {
+  width: fit-content;
+  height: fit-content;
+
+  &_pfpcont {
+    position: relative;
+    width: 453.2px;
+    height: 503.55px;
+    background-color: $clr-primary;
+    
+
+    .pfpfcont_img {
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      position: absolute; // Make sure it covers the entire container
+      top: 0;
+      left: 0;
+      z-index: 1; // Ensure it's below other layers
+      transition: .5s ease-out;
+    }
+
+    .pfpfcont_darken {
+      
+      background-color: rgba(0, 0, 0, 0.902);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2; // Ensure it’s above the image
+      opacity: 0; // Initially hidden
+      transition: .5s ease-in;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      
+      .darkeninfo {
+        z-index: 1;
+        color: $clr-light;
+        width: 95%;
+        text-align: center;
+        transition: .1s ease-in;
+        transform: scale(0.4);
+        transform-origin: bottom right;
+        opacity: 0;
+       
+      }
+    }
+  }
+
+ 
+
+
+
+
+
+  &_info {
+    padding: 2rem 0;
+    line-height: 2.4rem;
+    ul {
+      display: flex;
+      gap: 7px;
+      justify-content: center;
+      margin-bottom: 1rem;
+      li {
+        background-color: $clr-primary;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        
+        i {
+          font-size: 1.6rem;
+          color: $clr-light;
+        }
+        &:hover {
+          background-color: $clr-grey;
+        }
+      }
+     
+      
+    }
+    h1,p {
+      text-align: center;
+    }
+    h1 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 13px;
+    }
+    
+  }
+}
+.card:hover {
+  .pfpfcont_img{
+    transform: translate(-16px, -15px);
+    transition: .3s ease-in-out;
+  }
+  .pfpfcont_darken {
+    transform: translate(-16px, -15px);
+    opacity: 1;
+   
+    transition: .3s ease-out;
+   
+    .darkeninfo {
+      
+      transform: scale(1);
+      transform-origin: center;
+      margin: 25rem auto;
+      transition: .3s ease-out;
+      opacity: 1;
+    }
+
+  }
+}
+}
+@include mediaQuery($break-md) {
+padding: unset;
+padding-bottom: 5.6rem;
+.container  {
+  #hero6_title {
+    display: block;
+    margin: 4rem auto;
+    &::after {
+      content: "";
+      display: block;
+      width: 38%; 
+      height: 1.9px;
+      background-color: $clr-primary; 
+      position: absolute;
+      left: 50%; 
+      bottom: -8px; 
+      transform: translateX(-50%); 
+    }
+  }
+  display: flex;
+  justify-content: space-between;
+
+ .card {
+  
+  &_pfpcont {
+    width: 300px;
+    height: 333.33px;
+    .pfpfcont_darken {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .darkeninfo {
+        width: 90%;
+      }
+    }
+  }
+  
+ }
+
+}
+}
+
+
+
+}
+
+
+.hero7 {
+ &_holder {
+  background: linear-gradient(to right,  rgb(84, 162, 240), $clr-primary );
+  
+  
+  .container{
+      padding: 8rem 0;
+      height: fit-content;
+      .text {
+          color: $clr-light;
+          text-align: center;
+          .title {
+             h1 {
+              font-size: 32px;
+              font-weight: 500;
+              margin-bottom: 3rem;
+              position: relative;
+              display: inline-block; /* Ensures the h1 element is only as wide as its content */
+              
+              &::after {
+                  content: "";
+                  position: absolute;
+                  left: 50%; /* Start the underline from the center */
+                  transform: translateX(-50%); /* Center the underline horizontally */
+                  bottom: -2px; /* Adjust this to position the underline properly */
+                  width: 30%;
+                  height: 1px; /* Thickness of the underline */
+                  background-color: $clr-primary; /* Color of the underline */
+              }
+             }
+             
+          }
+         
+          p {
+              font-size: 20px;
+              line-height: 4rem
+              
+
+          }
+         
+      }
+      @include mediaQuery($break-md) {
+        .text {
+          p {
+              width: 50%;
+              display: block;
+              margin: 0 auto
+          }
+        }
+      }
+      .buttons {
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+          justify-content: center;
+          margin-top: 3rem;
+          cursor: pointer;
+         
+
+          ul {
+             display: flex;
+             padding: 1.3rem 2rem;
+             gap: 2px;
+              li {
+                 font-size: 1.4rem;
+              }
+          }
+          .buy {
+              background-color: $clr-primary;
+              &:hover {
+                  filter: brightness(90%);
+              }
+              li {
+                  color: $clr-light;
+
+                
+                }
+          }
+          .read {
+              background-color: $clr-light;
+              &:hover {
+                  filter: brightness(90%);
+              }
+              li {
+                  
+
+                 i {
+                  color: black;
+                 }
+                }
+          }
+      }
+  }
+ 
+ }
+}
